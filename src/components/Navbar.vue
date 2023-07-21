@@ -1,7 +1,7 @@
 <template>
   <header>
     <router-link :to="{ name: 'Home' }">
-      <h1>DarQba</h1>
+      <h1 class="darquba">DarQba</h1>
     </router-link>
     <nav>
       <router-link :to="{ name: 'Home' }">Feladányok</router-link>
@@ -17,14 +17,36 @@ export default {
 </script>
 
 <style scoped>
+.darquba {
+  font-weight: 900;
+  background: linear-gradient(to right,
+      #aa0000 20%,
+      #000000 30%,
+      #444 70%,
+      #e73434 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 10s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 10px;
+  max-width: 800px;
 }
 
 header h1 {
@@ -37,11 +59,15 @@ header h1 {
 header a {
   color: #bbb;
   text-decoration: none;
-  margin-left: 30px;
+  padding-right: 20px;
+
 }
 
 header a.router-link-active {
   color: #444;
-  font-weight: bold;
+}
+
+nav {
+  margin: 10px 0 10px 0px;
 }
 </style>

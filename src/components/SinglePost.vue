@@ -31,7 +31,7 @@ export default {
 
 <style>
 .post {
-  margin: 0 20px 0 40px;
+  margin: 0 10px 0 0px;
   padding-bottom: 30px;
   border-bottom: 1px dashed #cccccc;
 }

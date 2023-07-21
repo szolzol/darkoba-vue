@@ -12,13 +12,22 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,600;1,700;1,900&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Tourney', cursive;
+  font-weight: 900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #444;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 10px auto;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+
 }
 
 .pill {
@@ -30,6 +39,17 @@ export default {
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
+}
+
+button {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px
 }
 
 .errortext {

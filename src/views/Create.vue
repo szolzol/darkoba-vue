@@ -21,7 +21,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { db } from '../firebase/config'
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+import { doc, setDoc, collection, addDoc, Timestamp, serverTimestamp } from "firebase/firestore";
 
 
 export default {
@@ -31,6 +31,8 @@ export default {
     const answer = ref('')
     const tags = ref([])
     const tag = ref('')
+    const storyIcon = ref('')
+    const postDate = ref('')
 
     const router = useRouter()
     //console.log(router)
@@ -51,7 +53,9 @@ export default {
         title: title.value,
         body: body.value,
         answer: answer.value,
-        tags: tags.value
+        tags: tags.value,
+        storyIcon: "fa - solid fa- ghost",
+        postDate: serverTimestamp()
       }
       //JSON server code:
       // await fetch('192.168.0.50:8181/posts', {
@@ -67,7 +71,7 @@ export default {
       router.push({ name: 'Home' })
     }
 
-    return { answer, body, title, tags, tag, handleKeydown, handleSubmit }
+    return { postDate, storyIcon, answer, body, title, tags, tag, handleKeydown, handleSubmit }
   },
 }
 </script>
@@ -76,7 +80,7 @@ export default {
 input,
 textarea {
   display: block;
-  margin: 10px 0;
+  /* margin: 10px 0; */
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
@@ -84,12 +88,12 @@ textarea {
 }
 
 textarea {
-  height: 100px;
+  height: 110px;
 }
 
 label {
   display: inline-block;
-  margin: 0 20px 0 40px;
+  /* margin: 0 20px 0 40px; */
 
   margin-top: 30px;
   position: relative;
@@ -103,22 +107,11 @@ label::before {
   display: block;
   width: 100%;
   height: 100%;
-  background: #444;
+  background: #aa0000;
   position: absolute;
   z-index: -1;
   padding-right: 40px;
   left: -30px;
   transform: rotateZ(-1.5deg);
-}
-
-button {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background: #aa0000;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 18px
 }
 </style>
