@@ -20,6 +20,9 @@
 <script>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { db } from '../firebase/config'
+import { doc, setDoc, collection, addDoc } from "firebase/firestore";
+
 
 export default {
   setup() {
@@ -44,23 +47,27 @@ export default {
 
     const handleSubmit = async () => {
       const post = {
-        id: Math.floor(Math.random() * 10000),
+        // id: Math.floor(Math.random() * 10000),
         title: title.value,
         body: body.value,
         answer: answer.value,
         tags: tags.value
       }
+      //JSON server code:
+      // await fetch('192.168.0.50:8181/posts', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(post)
+      // })
 
-      await fetch('192.168.0.50:8181/posts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(post)
-      })
+      // Add a new document with a generated id.
+      const docRef = await addDoc(collection(db, "posts"), post);
+      console.log("Document written with ID: ", docRef.id);
 
       router.push({ name: 'Home' })
     }
 
-    return { body, title, tags, tag, handleKeydown, handleSubmit }
+    return { answer, body, title, tags, tag, handleKeydown, handleSubmit }
   },
 }
 </script>

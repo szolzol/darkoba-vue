@@ -1,7 +1,7 @@
 <template>
   <header>
     <router-link :to="{ name: 'Home' }">
-      <h1>Darkoba</h1>
+      <h1>DarQba</h1>
     </router-link>
     <nav>
       <router-link :to="{ name: 'Home' }">Feladányok</router-link>
