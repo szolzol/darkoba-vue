@@ -13,4 +13,4 @@ A Darkoba egy logikai játék, ami a barkóbát vegyíti a krimik izgalmával é
             nyitjára, felolvassa a többieknek a megfejtést, felfedve a
             rejtély teljes megoldását. A játékmester követheti, hogy ki,
             hány kérdéssel jutott el a megoldáshoz, ezzel mérve a csapat
-            teljesítményét.
+            teljesítményét...

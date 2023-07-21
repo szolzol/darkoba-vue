@@ -51,5 +51,7 @@ export default {
   border-bottom: 1px dashed #cccccc;
   border-top: 1px dashed #cccccc;
   color: rgb(109, 109, 109);
+  text-align: justify;
+
 }
 </style>
