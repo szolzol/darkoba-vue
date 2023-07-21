@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { db } from '../firebase/config'
-import { doc, getDoc, collection, getDocs } from "firebase/firestore";
+import { doc, getDoc, collection, getDocs, query, orderBy } from "firebase/firestore";
 
 const getPosts = () => {
 
@@ -18,7 +18,9 @@ const getPosts = () => {
       //   throw Error('O-ó... Nincsenek adatok...')
       // }
       // posts.value = await data.json()
-      const querySnapshot = await getDocs(collection(db, "posts"));
+      const postsRef = collection(db, "posts")
+      const q = query(postsRef, orderBy('postDate', 'desc'))
+      const querySnapshot = await getDocs(q);
 ;
       posts.value = querySnapshot.docs.map(doc => {
         // console.log(doc.data())
