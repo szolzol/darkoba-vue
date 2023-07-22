@@ -45,7 +45,7 @@ h3,
 label {
   display: inline-block;
   position: relative;
-  font-size: 26px;
+  font-size: 22px;
   color: white;
   margin-bottom: 10px;
   max-width: 400px;
@@ -55,8 +55,8 @@ h3::before,
 label::before {
   content: "";
   display: block;
-  width: 110%;
-  height: 110%;
+  width: 105%;
+  height: 115%;
   background: #aa0000;
   position: absolute;
   z-index: -1;
@@ -91,7 +91,8 @@ button {
   color: white;
   border: none;
   padding: 8px 16px;
-  font-size: 18px
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .errortext {
