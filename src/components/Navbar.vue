@@ -47,6 +47,7 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 800px;
+  padding-bottom: 30px;
 }
 
 header h1 {

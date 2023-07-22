@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+/* Global styles are here only  */
+
 /* Google Fonts import  */
 @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,600;1,700;1,900&display=swap');
 
@@ -33,6 +35,41 @@ export default {
 
 }
 
+.post {
+  margin: 0 10px 0 0px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #cccccc;
+}
+
+h3,
+label {
+  display: inline-block;
+  position: relative;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+
+h3::before,
+label::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #aa0000;
+  position: absolute;
+  z-index: -1;
+  padding-right: 40px;
+  left: -30px;
+  transform: rotateZ(-1deg);
+}
+
+.pillbox {
+  display: flex;
+  align-items: stretch;
+}
+
 .pill {
   display: inline-block;
   margin: 10px 10px 0 0;
@@ -45,6 +82,8 @@ export default {
 }
 
 button {
+  font-family: 'Tourney', cursive;
+  font-weight: 900;
   display: block;
   margin-top: 50px;
   margin-bottom: 30px;

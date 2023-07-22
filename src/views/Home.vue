@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .rules {
-  margin: 20px auto 20px auto;
+  margin: auto auto 20px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px dashed #cccccc;

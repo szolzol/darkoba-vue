@@ -21,7 +21,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { db } from '../firebase/config'
-import { doc, setDoc, collection, addDoc, Timestamp, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 
 export default {
@@ -35,9 +35,6 @@ export default {
     const postDate = ref('')
 
     const router = useRouter()
-    //console.log(router)
-    //router.go(1)
-    //router.go(-1)
 
     const handleKeydown = () => {
       if (!tags.value.includes(tag.value)) {
@@ -80,38 +77,17 @@ export default {
 input,
 textarea {
   display: block;
-  /* margin: 10px 0; */
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #b9b9b9;
+  margin: 10px 0px 40px 0px;
+  font-size: 16px;
+  font-family: 'Tourney', cursive;
+  font-weight: 700;
 }
 
 textarea {
   height: 110px;
-}
-
-label {
-  display: inline-block;
-  /* margin: 0 20px 0 40px; */
-
-  margin-top: 30px;
-  position: relative;
-  font-size: 20px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-label::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #aa0000;
-  position: absolute;
-  z-index: -1;
-  padding-right: 40px;
-  left: -30px;
-  transform: rotateZ(-1.5deg);
 }
 </style>

@@ -29,37 +29,4 @@ export default {
 }
 </script>
 
-<style>
-.post {
-  margin: 0 10px 0 0px;
-  padding-bottom: 30px;
-  border-bottom: 1px dashed #cccccc;
-}
-
-.post h3 {
-  display: inline-block;
-  position: relative;
-  font-size: 26px;
-  color: white;
-  margin-bottom: 10px;
-  max-width: 400px;
-}
-
-.post h3::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #aa0000;
-  position: absolute;
-  z-index: -1;
-  padding-right: 40px;
-  left: -30px;
-  transform: rotateZ(-1deg);
-}
-
-.pillbox {
-  display: flex;
-  align-items: stretch;
-}
-</style>
+<style scoped></style>
