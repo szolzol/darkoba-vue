@@ -81,7 +81,7 @@ textarea {
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #b9b9b9;
-  margin: 10px 0px 40px 0px;
+  margin: 10px 0px 30px 0px;
   font-size: 16px;
   font-family: 'Tourney', cursive;
   font-weight: 700;

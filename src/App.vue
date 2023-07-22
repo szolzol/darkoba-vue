@@ -45,7 +45,8 @@ h3,
 label {
   display: inline-block;
   position: relative;
-  font-size: 22px;
+  font-weight: 900;
+  font-size: 21px;
   color: white;
   margin-bottom: 10px;
   max-width: 400px;
