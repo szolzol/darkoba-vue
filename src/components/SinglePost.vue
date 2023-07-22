@@ -1,7 +1,13 @@
 <template>
   <div class="post">
     <router-link :to="{ name: 'Details', params: { id: post.id } }">
-      <h3>{{ post.title }}</h3>
+      <div class="title">
+        <h3>{{ post.title }}
+          <span class="storyIcon">
+            <font-awesome-icon :icon="post.storyIcon" />
+          </span>
+        </h3>
+      </div>
     </router-link>
     <p>{{ snippet }}</p>
     <div class="pillbox">
@@ -29,4 +35,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.storyIcon {
+  color: white;
+  padding-left: 15px;
+  font-size: 1em
+}
+</style>

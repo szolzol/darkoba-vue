@@ -55,8 +55,8 @@ h3::before,
 label::before {
   content: "";
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   background: #aa0000;
   position: absolute;
   z-index: -1;
@@ -101,7 +101,7 @@ button {
   border-radius: 0 !important;
   position: relative;
   display: inline-block !important;
-  box-shadow: 1px 1px 1px #aaaaaa;
+  box-shadow: 2px 2px 2px #aaaaaa;
   margin-top: 40px;
 }
 </style>
