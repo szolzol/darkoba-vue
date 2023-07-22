@@ -51,7 +51,7 @@ export default {
         body: body.value,
         answer: answer.value,
         tags: tags.value,
-        storyIcon: "fa - solid fa- ghost",
+        storyIcon: "fa-solid fa-skull",
         postDate: serverTimestamp()
       }
       //JSON server code:
