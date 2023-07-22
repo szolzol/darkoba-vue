@@ -1,11 +1,12 @@
 import { ref } from 'vue'
 import { db } from '../firebase/config'
-import { doc, getDoc, collection, getDocs, query, orderBy } from "firebase/firestore";
+import { collection, getDocs, query, orderBy, getCountFromServer } from "firebase/firestore";
 
 const getPosts = () => {
 
   const posts = ref([])
   const error = ref(null)
+  const count = ref(null)
 
   const load = async () => {
     try {
@@ -26,13 +27,18 @@ const getPosts = () => {
         // console.log(doc.data())
         return { ...doc.data(), id: doc.id }
       })
+
+      const coll = collection(db, "posts");
+      const snapshot = await getCountFromServer(coll);
+      count.value = snapshot.data().count
+      console.log('count: ', count.value);
     }
     catch(err) {
       error.value = err.message
     }
   }
 
-  return { posts, error, load }
+  return { posts, error, count, load }
 }
 
 export default getPosts

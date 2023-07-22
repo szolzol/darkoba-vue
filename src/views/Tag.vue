@@ -35,14 +35,14 @@ export default {
         const router = useRouter()
         const route = useRoute()
 
-        const { posts, error, load } = getPosts()
+        const { posts, error, count, load } = getPosts()
         load()
 
         const postsWithTag = computed(() => {
             return posts.value.filter(p => p.tags.includes(route.params.tag))
         })
 
-        return { router, route, posts, error, postsWithTag }
+        return { router, route, posts, error, count, postsWithTag }
     }
 }
 </script>

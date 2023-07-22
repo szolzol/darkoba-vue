@@ -34,11 +34,11 @@ export default {
   name: 'Home',
   components: { PostList, Spinner },
   setup() {
-    const { posts, error, load } = getPosts()
+    const { posts, error, count, load } = getPosts()
 
     load()
 
-    return { posts, error }
+    return { posts, error, count }
   },
 }
 </script>
